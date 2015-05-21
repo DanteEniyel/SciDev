@@ -6,8 +6,9 @@ if (Meteor.isClient) {
   // This code only runs on the client
   Template.body.helpers({
     tasks: function(){
-		return Tasks.find({});
+		return Tasks.find({owner:Meteor.userId()});
 	}
+	
   });
   
   Template.body.events({
@@ -25,7 +26,7 @@ if (Meteor.isClient) {
 	  }
   })
   
- 
+
 Accounts.ui.config({
   passwordSignupFields: "USERNAME_ONLY"
 });
