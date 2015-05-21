@@ -7,9 +7,13 @@
   <div class="container">
     <header>
       <h1>Todo List</h1>
-	  <form class="new-task">
-		<input type="text" name="text" placeholder ="Type to add new tasks"/>
-	   </form>
+	  <h2> Trenutno logirani user: {{currentUser.username}} </h2>
+	  
+{{#if currentUser}}
+  <form class="new-task">
+    <input type="text" name="text" placeholder="Dodaj novi zadatak" />
+  </form>
+{{/if}}
 	  
     </header>
 
@@ -19,8 +23,12 @@
       {{/each}}
     </ul>
   </div>
+  
+  <div> <p> Hello logggiiiin</p>
+  {{> loginButtons}}
+  </div>
 </body>
 
 <template name="task">
-  <li>{{text}}</li>
+  <li><span class="text"><strong>{{username}}</strong> - {{text}}</span></li>
 </template>

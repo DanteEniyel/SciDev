@@ -15,11 +15,18 @@ if (Meteor.isClient) {
 		  var text = event.target.text.value;
 		  Tasks.insert({
 			  text: text,
-			  createdAt: new Date()
+			  createdAt: new Date(),
+			  owner: Meteor.userId(), //id korisnika
+			  username: Meteor.user().username  //username
 		  });
 		  event.target.text.value = "";
 		  
 		  return false;
 	  }
   })
+  
+ 
+Accounts.ui.config({
+  passwordSignupFields: "USERNAME_ONLY"
+});
 }

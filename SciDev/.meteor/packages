@@ -8,3 +8,5 @@ meteor-platform
 autopublish
 insecure
 meteorhacks:kadira
+accounts-ui
+accounts-password
