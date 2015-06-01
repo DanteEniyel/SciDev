@@ -1,0 +1,23 @@
+<!-- simple-todos.html -->
+<head>
+  <title>SciDev</title>
+</head>
+
+<body>
+  
+</body>
+
+<template name="task">
+  <li><span class="text"><strong>{{username}}</strong> - {{text}}</span></li>
+</template>
+
+<template name="home">
+ <div class="container">
+    <header>
+      <h1>Welcome to SciDev</h1>
+	  <h2>Are you a Scientist or a developer: </h2>
+	  </header>
+<div> I do cool research <a href="{{ pathFor 'sci' }}">Scientist</a></div>
+<div> I make cool research happen better <a href="{{ pathFor 'dev' }}">Developer</a></div>
+</div>
+</template>
