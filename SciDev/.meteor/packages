@@ -11,3 +11,16 @@ meteorhacks:kadira
 accounts-ui
 accounts-password
 iron:router
+accounts-facebook
+accounts-github
+accounts-google
+accounts-twitter
+service-configuration
+http
+email
+meteorhacks:ssr
+audit-argument-checks
+themeteorchef:bert
+twbs:bootstrap
+browser-policy
+check
