@@ -5,11 +5,11 @@
 
 // Set name and from email.
 Accounts.emailTemplates.resetPassword.siteName = "Application Name";
-Accounts.emailTemplates.resetPassword.from     = "Application Admin Email <admin@application.com>";
+Accounts.emailTemplates.from     = "Application Admin Email <returic@gmail.com>";
 
 // Set a subject for the reset password email.
 Accounts.emailTemplates.resetPassword.subject = function(user){
-  return "[Application Name] Reset Your Password";
+  return "[SciDev] Reset Your Password";
 }
 
 // Set the body of the reset password email.
