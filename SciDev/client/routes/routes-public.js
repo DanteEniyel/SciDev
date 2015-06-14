@@ -3,15 +3,6 @@
 * Routes that are visible to all (public) users.
 */
 
-Router.route('welcome', {
-  path: '/',
-  template: 'welcome',
-  onBeforeAction: function(){
-    Session.set('currentRoute', 'welcome');
-    this.next();
-  }
-});
-
 Router.route('signup', {
   path: '/signup',
   template: 'signup',

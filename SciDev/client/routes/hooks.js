@@ -15,7 +15,7 @@
 
 checkUserLoggedIn = function(){
   if( !Meteor.loggingIn() && !Meteor.user() ) {
-    Router.go('/');
+    Router.go('/login');
   } else {
     this.next();
   }
@@ -41,7 +41,6 @@ userAuthenticated = function(){
 
 Router.onBeforeAction(checkUserLoggedIn, {
   except: [
-    'welcome',
     'signup',
     'login',
     'recover-password',
@@ -51,7 +50,6 @@ Router.onBeforeAction(checkUserLoggedIn, {
 
 Router.onBeforeAction(userAuthenticated, {
   only: [
-    'welcome',
     'signup',
     'login',
     'recover-password',

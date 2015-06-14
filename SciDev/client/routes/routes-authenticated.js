@@ -3,9 +3,9 @@
 * Routes that are only visible to authenticated users.
 */
 
-Router.route('welcomeLogged', {
-  path: '/loggedIn',
-  template: 'welcomeLogged',
+Router.route('index', {
+  path: '/',
+  template: 'index',
   subscriptions: function(){
     return Meteor.subscribe('examplePublication');
     /* 
