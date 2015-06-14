@@ -6,7 +6,6 @@
 standard-app-packages
 underscore
 accounts-password
-accounts-base
 jquery
 check
 audit-argument-checks
@@ -22,3 +21,5 @@ themeteorchef:bert
 meteorhacks:ssr
 fourseven:scss
 meteorhacks:kadira
+accounts-base
+accounts-ui
