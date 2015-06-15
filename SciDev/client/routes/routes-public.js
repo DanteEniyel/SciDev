@@ -3,15 +3,33 @@
 * Routes that are visible to all (public) users.
 */
 
-Router.route('signup', {
-  path: '/signup',
-  template: 'signup',
+
+Router.route('welcome', {
+  path: '/welcome',
+  template: 'welcome',
   onBeforeAction: function(){
-    Session.set('currentRoute', 'signup');
+    Session.set('currentRoute', 'welcome');
     this.next();
   }
 });
 
+Router.route('signupScientist', {
+  path: '/signupScientist',
+  template: 'signupScientist',
+  onBeforeAction: function(){
+    Session.set('currentRoute', 'signupScientist');
+    this.next();
+  }
+});
+
+Router.route('signupDeveloper', {
+  path: '/signupDeveloper',
+  template: 'signupDeveloper',
+  onBeforeAction: function(){
+    Session.set('currentRoute', 'signupDeveloper');
+    this.next();
+  }
+});
 Router.route('login', {
   path: '/login',
   template: 'login',

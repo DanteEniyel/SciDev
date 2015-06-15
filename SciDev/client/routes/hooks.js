@@ -15,7 +15,7 @@
 
 checkUserLoggedIn = function(){
   if( !Meteor.loggingIn() && !Meteor.user() ) {
-    Router.go('/login');
+    Router.go('/welcome');
   } else {
     this.next();
   }
@@ -38,19 +38,23 @@ userAuthenticated = function(){
 /*
 * Run Hooks
 */
-
+//if user is not logged in reroute him to welcome except if he visites bottom sites
 Router.onBeforeAction(checkUserLoggedIn, {
   except: [
-    'signup',
+    'welcome',
+    'signupDeveloper',
+    'signupScientist',
     'login',
     'recover-password',
     'reset-password'
   ]
 });
-
+//if user is logged in and wants to go to these sites, reroute them to its standard
 Router.onBeforeAction(userAuthenticated, {
   only: [
-    'signup',
+    'welcome',
+    'signupDeveloper',
+    'signupScientist',
     'login',
     'recover-password',
     'reset-password'
