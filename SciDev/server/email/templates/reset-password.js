@@ -4,7 +4,7 @@
 */
 
 // Set name and from email.
-Accounts.emailTemplates.resetPassword.siteName = "Application Name";
+Accounts.emailTemplates.resetPassword.siteName = "SciDev";
 Accounts.emailTemplates.from     = "Application Admin Email <returic@gmail.com>";
 
 // Set a subject for the reset password email.

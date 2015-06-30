@@ -5,6 +5,15 @@
 
 
 Router.route('welcome', {
+  path: '/',
+  template: 'welcome',
+  onBeforeAction: function(){
+    Session.set('currentRoute', 'welcome');
+    this.next();
+  }
+});
+
+Router.route('welcomePage', {
   path: '/welcome',
   template: 'welcome',
   onBeforeAction: function(){

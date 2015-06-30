@@ -39,17 +39,20 @@ Template.signupDeveloper.onRendered(function(){
     },
     submitHandler: function(){
       // Grab the user's details.
-      user = {
+     var user = {
         email: $('[name="emailAddress"]').val(),
-        password: $('[name="password"]').val()
+        password: $('[name="password"]').val(),
+          profile: ""
       }
-
-      // Create the user's account.
-      Accounts.createUser({email: user.email, password: user.password}, function(error){
-        if(error){
-          Bert.alert(error.reason, 'danger');
-        } else {
+      console.log(user.email)
+      Meteor.call('createUserWithRole', user, 'dev', function(err, userId) {
+        if (!err) {
           Bert.alert('Welcome!', 'success');
+                        Router.go("indexDev");
+
+        } else {
+            Bert.alert(err.reason, 'danger');
+
         }
       });
     }
