@@ -15,7 +15,8 @@
           <input type="submit" class="btn btn-success" value="Login">
         </div> <!-- end .form-group -->
       </form>
-      <p>Don't have an account? <a href="{{pathFor 'welcome'}}">Sign Up</a>.</p>
+     
+      <p>Don't have an account? <a href="{{pathFor 'signup'}}">Sign Up</a> or Login with an exsisting account {{> loginButtons}}.</p>
     </div> <!-- end .col-xs-12 -->
   </div> <!-- end .row -->
 </template>
